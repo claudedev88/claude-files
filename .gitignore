@@ -1,0 +1,14 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Secrets — never commit these to a public repo
+.env
+*.key
+*.pem
+*.local
