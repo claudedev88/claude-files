@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Three Agentforce Agents — Business Capability Summary</title>
+<style>
+  :root{
+    --navy:#0b2545; --blue:#13315c; --bg:#f4f6fa; --card:#ffffff;
+    --ink:#1c2433; --muted:#5b6677; --line:#e2e7f0; --soft:#eef3fb;
+    --a1:#0f7b8a; --a1soft:#e3f3f5;
+    --a2:#b8590a; --a2soft:#fbeede;
+    --a3:#5b3a9e; --a3soft:#efe9fb;
+    --good:#0f9d6e;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:var(--bg); line-height:1.6;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 24px 80px}
+  header.hero{background:linear-gradient(135deg,var(--navy),var(--blue)); color:#fff; padding:52px 24px 44px; text-align:center;}
+  header.hero .inner{max-width:820px; margin:0 auto}
+  .eyebrow{text-transform:uppercase; letter-spacing:.16em; font-size:12px; font-weight:700; opacity:.85; margin-bottom:14px;}
+  header.hero h1{margin:0 0 14px; font-size:32px; line-height:1.2}
+  header.hero p{margin:0 auto; max-width:680px; font-size:16px; opacity:.92}
+
+  .intro{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 24px; margin-top:30px; font-size:15px; color:var(--muted)}
+  .intro strong{color:var(--navy)}
+
+  .agent{background:var(--card); border:1px solid var(--line); border-radius:16px; margin-top:28px; overflow:hidden; box-shadow:0 1px 4px rgba(11,37,69,.06)}
+  .agent .top{padding:24px 28px 20px; color:#fff}
+  .agent.a1 .top{background:linear-gradient(135deg,var(--a1),#0a5d68)}
+  .agent.a2 .top{background:linear-gradient(135deg,var(--a2),#8c4208)}
+  .agent.a3 .top{background:linear-gradient(135deg,var(--a3),#3f2873)}
+  .agent .label{font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.12em; opacity:.85}
+  .agent h2{margin:6px 0 8px; font-size:24px}
+  .agent .tagline{margin:0; font-size:15px; opacity:.94}
+  .agent .body{padding:8px 28px 26px}
+
+  .block{padding:18px 0; border-bottom:1px solid var(--line)}
+  .block:last-child{border-bottom:none}
+  .block h3{margin:0 0 10px; font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--navy)}
+  .a1 .block h3{color:var(--a1)} .a2 .block h3{color:var(--a2)} .a3 .block h3{color:var(--a3)}
+
+  ul.caps{margin:0; padding-left:0; list-style:none}
+  ul.caps li{position:relative; padding-left:26px; margin-bottom:9px; font-size:15px}
+  ul.caps li::before{content:""; position:absolute; left:6px; top:9px; width:8px; height:8px; border-radius:2px;}
+  .a1 ul.caps li::before{background:var(--a1)} .a2 ul.caps li::before{background:var(--a2)} .a3 ul.caps li::before{background:var(--a3)}
+
+  .valuewrap{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:4px}
+  @media(max-width:620px){.valuewrap{grid-template-columns:1fr}}
+  .valuecard{border-radius:10px; padding:14px 16px}
+  .a1 .valuecard{background:var(--a1soft)} .a2 .valuecard{background:var(--a2soft)} .a3 .valuecard{background:var(--a3soft)}
+  .valuecard .k{font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--navy); margin-bottom:4px}
+  .valuecard .v{font-size:14.5px; color:var(--ink)}
+
+  .outcome{background:var(--soft); border-radius:10px; padding:14px 18px; font-size:15px}
+  .outcome strong{color:var(--navy)}
+
+  .compare{margin-top:40px}
+  .compare h2{font-size:20px; color:var(--navy); margin-bottom:12px}
+  table{width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden; font-size:14px}
+  th,td{text-align:left; padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:top}
+  th{background:var(--soft); color:var(--navy); font-size:12px; text-transform:uppercase; letter-spacing:.04em}
+  tr:last-child td{border-bottom:none}
+  td.name{font-weight:600}
+  td.c1{color:var(--a1)} td.c2{color:var(--a2)} td.c3{color:var(--a3)}
+
+  footer{margin-top:42px; text-align:center; color:var(--muted); font-size:13px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="inner">
+    <div class="eyebrow">Business Capability Summary</div>
+    <h1>Three Distinct Agentforce Agents</h1>
+    <p>Three separate AI agents, each purpose-built for a different stage of delivering Salesforce Agentforce solutions. Each profile below covers what the agent does, the business value it creates, and where it drives efficiency.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="intro">
+    <strong>How to read this:</strong> these are three independent agents, not one tool in three modes. Each has its own scope, its own business purpose, and its own efficiency gains. They are presented separately and should be evaluated on their own merits.
+  </div>
+
+  <!-- AGENT 1 -->
+  <div class="agent a1">
+    <div class="top">
+      <div class="label">Agent 1</div>
+      <h2>The Project Governance Agent</h2>
+      <p class="tagline">Keeps project documentation accurate, aligned, and audit-ready throughout an Agentforce engagement.</p>
+    </div>
+    <div class="body">
+      <div class="block">
+        <h3>Business process capabilities</h3>
+        <ul class="caps">
+          <li>Converts raw meeting notes and call summaries into structured updates across the formal project documents (requirements, user stories, architecture, and a technical playbook).</li>
+          <li>Maintains a single source of truth, enforcing cross-document consistency so no two documents ever contradict each other.</li>
+          <li>Presents a change summary for approval before any document is edited — nothing changes without sign-off.</li>
+          <li>Preserves a full audit trail by archiving superseded content with a date and reason rather than deleting it.</li>
+          <li>Translates technical concepts into plain business language and verifies them against current Salesforce documentation before recording them.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3>Business value &amp; efficiency</h3>
+        <div class="valuewrap">
+          <div class="valuecard"><div class="k">Time saved</div><div class="v">Removes hours of manual note-writing and document reconciliation after every client call.</div></div>
+          <div class="valuecard"><div class="k">Risk reduced</div><div class="v">Eliminates conflicting requirements and scope drift by keeping all documents continuously aligned.</div></div>
+          <div class="valuecard"><div class="k">Governance</div><div class="v">Approval gates and a preserved change history make the project defensible and audit-ready.</div></div>
+          <div class="valuecard"><div class="k">Accuracy</div><div class="v">Every technical claim is checked against live documentation, not assumptions.</div></div>
+        </div>
+      </div>
+      <div class="block">
+        <h3>What it achieves</h3>
+        <div class="outcome"><strong>A project that is always documentation-current.</strong> Stakeholders can trust that the docs reflect today's reality, decisions are traceable, and no rework is caused by stale or contradictory information.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENT 2 -->
+  <div class="agent a2">
+    <div class="top">
+      <div class="label">Agent 2</div>
+      <h2>The Environment Onboarding Agent</h2>
+      <p class="tagline">Gets a Salesforce org and development environment fully build-ready through a guided, secure setup.</p>
+    </div>
+    <div class="body">
+      <div class="block">
+        <h3>Business process capabilities</h3>
+        <ul class="caps">
+          <li>Runs a structured 10-point readiness check covering tooling, org connection, project structure, API version, feature enablement, permissions, AI credits, and live connectivity.</li>
+          <li>Diagnoses each gap and performs the fix itself after a single approval — rather than handing the user a checklist to work through.</li>
+          <li>Enforces a strict credential security protocol: secrets never enter the conversation, are stored only in protected local files, and any accidental exposure triggers an immediate stop-and-rotate response.</li>
+          <li>Narrates every step and its purpose, advancing one item at a time so setup is transparent and controlled.</li>
+          <li>Remembers progress between sessions so onboarding resumes exactly where it left off.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3>Business value &amp; efficiency</h3>
+        <div class="valuewrap">
+          <div class="valuecard"><div class="k">Faster start</div><div class="v">Compresses a fiddly, error-prone environment setup into a guided run that finishes in one sitting.</div></div>
+          <div class="valuecard"><div class="k">Security</div><div class="v">A hard credential protocol prevents the most common and costly mistake — leaked keys and tokens.</div></div>
+          <div class="valuecard"><div class="k">Fewer failures</div><div class="v">Catches permission, version, and credit gaps up front, avoiding silent failures discovered late.</div></div>
+          <div class="valuecard"><div class="k">Low skill barrier</div><div class="v">The agent does the technical work, so setup doesn't require deep CLI or platform expertise.</div></div>
+        </div>
+      </div>
+      <div class="block">
+        <h3>What it achieves</h3>
+        <div class="outcome"><strong>A verified, secure, build-ready environment — fast.</strong> Teams reach the point of actually building agents sooner, with confidence that nothing critical was skipped and no credentials were exposed.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENT 3 -->
+  <div class="agent a3">
+    <div class="top">
+      <div class="label">Agent 3</div>
+      <h2>The Implementation &amp; Build Agent</h2>
+      <p class="tagline">Designs and builds the Agentforce solution end to end — configuration and code — through natural conversation.</p>
+    </div>
+    <div class="body">
+      <div class="block">
+        <h3>Business process capabilities</h3>
+        <ul class="caps">
+          <li>Captures the use case through a light, guided intake and ingests the relevant business documents.</li>
+          <li>Compares the live client org against a frozen baseline snapshot and a reference demo org to surface exactly what's proven and what's missing — a gap analysis.</li>
+          <li>Proposes an implementation path, then performs the configuration and code itself, with approval at each step in the order the user chooses.</li>
+          <li>Works with an agile mindset: re-sequences remaining work as requirements change and flags downstream impact of any change.</li>
+          <li>Maintains rollback paths, confirms before every deploy, and holds each component to a "done = deployed, tested, and signed off" standard.</li>
+          <li>Keeps a living progress log and decision log so work resumes seamlessly and every change is traceable to a request.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3>Business value &amp; efficiency</h3>
+        <div class="valuewrap">
+          <div class="valuecard"><div class="k">Speed to delivery</div><div class="v">Turns natural-language requests directly into deployed, working configuration and code.</div></div>
+          <div class="valuecard"><div class="k">Quality assured</div><div class="v">A strict definition of done plus rollback paths means changes are tested and reversible, not just made.</div></div>
+          <div class="valuecard"><div class="k">Clarity</div><div class="v">Org comparison and gap analysis target effort precisely at what the client actually needs.</div></div>
+          <div class="valuecard"><div class="k">Adaptable</div><div class="v">Agile re-planning absorbs changing requirements without derailing the build.</div></div>
+        </div>
+      </div>
+      <div class="block">
+        <h3>What it achieves</h3>
+        <div class="outcome"><strong>A built, tested, signed-off solution delivered conversationally.</strong> The heavy technical lifting is automated and auditable, shortening delivery while keeping full control and a clear record of every decision.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPARISON -->
+  <div class="compare">
+    <h2>Side by side</h2>
+    <table>
+      <thead>
+        <tr><th>Agent</th><th>Primary business purpose</th><th>Core efficiency gain</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name c1">1 · Project Governance</td>
+          <td>Keep all project documentation accurate, aligned, and audit-ready.</td>
+          <td>Eliminates manual documentation upkeep and prevents costly scope drift.</td>
+        </tr>
+        <tr>
+          <td class="name c2">2 · Environment Onboarding</td>
+          <td>Get the org and dev environment securely build-ready.</td>
+          <td>Compresses setup into one guided, secure run with no late-stage surprises.</td>
+        </tr>
+        <tr>
+          <td class="name c3">3 · Implementation &amp; Build</td>
+          <td>Design and build the solution end to end.</td>
+          <td>Turns conversation directly into tested, deployable work.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    Three independent Agentforce agents · Business capability summary
+  </footer>
+
+</div>
+</body>
+</html>
